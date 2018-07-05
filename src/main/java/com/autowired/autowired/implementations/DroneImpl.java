@@ -1,7 +1,9 @@
 package com.autowired.autowired.implementations;
 
 import com.autowired.autowired.services.AutobotService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DroneImpl implements AutobotService {
 
     private String name = "The Honda Robot";

@@ -10,7 +10,7 @@
 
     <bean id="robot" class="com.autowired.autowired.implementations.RobotImpl"/>
 
-    <bean id="drone" class="com.autowired.autowired.implementations.DroneImpl"/>
+    <bean id="droneImpl" class="com.autowired.autowired.implementations.DroneImpl"/>
 
 
 

@@ -6,17 +6,17 @@ import com.autowired.autowired.implementations.RobotImpl;
 public class BeanPath {
 
 
-    DroneImpl drone;
+    DroneImpl droneImpl;
 
     RobotImpl robot;
 
-    public BeanPath(DroneImpl drone, RobotImpl robot){
-        this.drone = drone;
+    public BeanPath(DroneImpl droneImpl, RobotImpl robot){
+        this.droneImpl = droneImpl;
         this.robot = robot;
     }
 
     public String produceRelevantNames(){
-        String droneName = drone.getAutobotsFullName();
+        String droneName = droneImpl.getAutobotsFullName();
         String robotName = robot.getAutobotsFullName();
         return "Your bots name are: " + droneName + " and " + robotName;
     }
