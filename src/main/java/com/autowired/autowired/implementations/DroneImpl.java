@@ -1,4 +1,4 @@
-package com.autowired.autowired.Implemtations;
+package com.autowired.autowired.implementations;
 
 import com.autowired.autowired.services.AutobotService;
 
