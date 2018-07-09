@@ -7,8 +7,15 @@ import org.springframework.stereotype.Component;
 public class RobotImpl implements AutobotService {
 
     private String name = "Tchiakowski Piana Robot";
-    private int model = 66745362;
+    private int model;
 
+    public void setModel(int model) {
+        this.model = model;
+    }
+
+    public int getModel() {
+        return model;
+    }
 
     @Override
     public String getAutobotsFullName() {

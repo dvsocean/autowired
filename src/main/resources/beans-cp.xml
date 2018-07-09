@@ -10,6 +10,11 @@
 
     <bean id="robot" class="com.autowired.autowired.implementations.RobotImpl"/>
 
+    <bean id="dataFeed" class="com.autowired.autowired.feed.DataFeed" autowire="constructor">
+        <constructor-arg value="Black on Black tesla" index="0"/>
+        <constructor-arg value="December 1985" index="1"/>
+    </bean>
+
     <bean id="droneImpl" class="com.autowired.autowired.implementations.DroneImpl"/>
 
 
