@@ -16,7 +16,7 @@ public class AutowiredController {
 
     @GetMapping("/auto")
     public String findAccessName(){
-        //return robotImpl.getAutobotsFullName() + " and model is --> " + robotImpl.getAutobotsModelNumber();
+        //return robotImpl.getAutobotsFullName() + " model is --> " + robotImpl.getAutobotsModelNumber();
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-cp.xml");
         DataFeed dataFeed = (DataFeed) ctx.getBean("dataFeed");
         return dataFeed.getSyncedModel();
