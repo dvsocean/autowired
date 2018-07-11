@@ -1,7 +1,5 @@
 package com.autowired.autowired.feed;
 
-import org.springframework.beans.factory.annotation.Value;
-
 public class DataFeed {
 
   private String syncedModel;

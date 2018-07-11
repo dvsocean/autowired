@@ -1,6 +1,5 @@
 package com.autowired.autowired.initializers;
 
-import com.autowired.autowired.feed.DataFeed;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
