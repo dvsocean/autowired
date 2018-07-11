@@ -14,12 +14,17 @@ public class AutowiredController {
     @Autowired
     AutobotService robotImpl;
 
+    @Autowired
+    DataFeed dataFeed;
+
     @GetMapping("/auto")
     public String findAccessName(){
-        //return robotImpl.getAutobotsFullName() + " model is --> " + robotImpl.getAutobotsModelNumber();
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("beans-cp.xml");
-        DataFeed dataFeed = (DataFeed) ctx.getBean("dataFeed");
-        return dataFeed.getSyncedModel();
+       return dataFeed.getLockHeedMartinData() + " and " + dataFeed.getLocation();
+    }
+
+    @GetMapping("/bot")
+    public String returnAutobot(){
+        return robotImpl.getAutobotsFullName();
     }
 
 }
