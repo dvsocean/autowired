@@ -1,21 +1,19 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <bean id="beanPath" class="com.autowired.autowired.initializers.BeanPath" autowire="constructor"/>
-
     <bean id="robot" class="com.autowired.autowired.implementations.RobotImpl"/>
 
-    <bean id="dataFeed" class="com.autowired.autowired.feed.DataFeed" autowire="byName">
-        <property name="syncedModel" value="Black on Black on Black Tesla rollin on Dubz"/>
+    <bean id="dataFeed" class="com.autowired.autowired.feed.DataFeed">
+        <property name="syncedModel" value="${com.syncedModel}"/>
     </bean>
 
     <bean id="droneImpl" class="com.autowired.autowired.implementations.DroneImpl"/>
-
-
-
+    <context:property-placeholder location="autowired.properties"/>
 </beans>
